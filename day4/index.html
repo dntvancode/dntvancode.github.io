@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width =device-width, initial-scale =1.0">
+        <title>Hoc CSS</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Charmonman&display=swap" rel="stylesheet">        
+        <style>
+            .color-icon{
+                color:red;
+                font-size: 24px;
+            }
+            .font{
+                font-family: 'Charmonman', cursive;            
+                }
+            .size{
+                width:200px;
+                height:200px;
+                display:flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            .red{
+                background-color:red;
+            }
+            .green{
+                background-color: green;
+            }
+            .blue{
+                background-color:blue;
+            }
+            .general{
+                float:left;
+            }
+            #flex{
+                clear: both;
+                padding-top: 20px;
+
+            }
+            .parent{
+                display:flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+    </style>
+    </head>
+    <body>
+        <!-- font icon -->
+        <h2>Font icons</h2>
+        <p>Đây là biểu tượng trái tim <i class="fas fa-heart color-icon"></i></p>
+        <!-- B1: vào cdn.js tìm link css (fontawesome phổ biến)
+            B2: nhúng link css lấy từ trang cnd.js
+            B3: truy cập vào trang của thư viện icon 
+            B4: chọn icon, copy text html, paste vào file html
+            B5: có thể css để phù hợp với mong muốn vì font-icon là text-->
+
+        <!-- font family -->
+        <h2>Font family</h2>
+        <p class="font">Kiên nhẫn là yếu tố quan trọng của thành công.</p>
+        <h2>Float</h2>
+
+        <div class = "size red general">Div1</div>
+        <div class = "size green general">Div2</div>
+        <div class = "size blue general" style = "float:right">Div3</div>
+
+        <h2 id="flex">Flex</h2>
+
+        <div class="parent">
+            <div class="size red">Item 1</div>
+            <div class="size green">Item 2</div>
+            <div class="size blue">Item 3</div>
+        </div>
+    </body>
+</html>
+<!-- chủ yếu sử dụng justify-content và align-items -->

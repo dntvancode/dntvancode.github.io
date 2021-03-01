@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: auto;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width =device-width, initial-scale =1.0">
+    <title>Pseudo Element</title>
+    <style>
+        #doan-van::first-letter{
+            color:red;
+            font-size:24px;
+        }
+        #doan-van::first-line{
+            font-style:italic;
+        }
+        #doan-van::selection{
+            background-color:black;
+            color:white;
+        }
+        #doan-van::before{
+            content: "ooo";
+        }
+        #doan-van::after{
+            content: url(https://dachihype.com/wp-content/uploads/2017/09/fight-night.jpg)
+        }
+
+        /* luôn luôn dùng content trong before và after */
+    </style>
+    </head>
+    <body>
+        <p id="doan-van" class ="">
+            You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. 
+            And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more
+        </p>

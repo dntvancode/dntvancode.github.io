@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: auto;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width =device-width, initial-scale =1.0">
+    <title>
+        Hiệu ứng động
+    </title>
+    <style>
+        .rect {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition-property: border-radius;
+            transition-duration: 2s, 5s;
+            transition: all 2s 0.5s;
+        }
+
+        .rect:hover {
+            border-radius: 50px;
+            background-color: yellow;
+        }
+
+        .button {
+            padding: 5px 10px 5px 10px;
+            font-size: 20px;
+            background-color: blue;
+            color: white;
+            margin-top: 20px;
+            width: 200px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            box-sizing: border-box;
+            transition: all 1s;
+        }
+
+        .button:hover {
+            background-color: green;
+            border-radius: 35px;
+
+        }
+        .rect1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-top:20px;
+            transition: all 2s;
+        }
+        .rect1:hover{
+            opacity:0.5;
+            /* transform: scale(1.1); */
+            /* transform: translate(20px,0); */
+            /* toạ độ x,y - x là âm sẽ dịch sang trái, y âm dịch xuống dưới */
+            transform: rotate(45deg);
+        }
+        
+        .rect2{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-top:20px;
+            animation:rotation 1s infinite alternate;
+        }
+        @keyframes change-color{
+            from{
+                background-color: red;
+            }
+            to{
+                background-color: orange;
+            }
+        }
+        @keyFrames rotation{
+            20%{
+                transform: rotate(72deg);
+            }
+            40%{
+                transform: rotate(128deg);
+                color:gold;
+            }
+            }
+            60%{
+                transform: rotate(210deg);
+            }
+            }
+            80%{
+                transform: rotate(360deg);
+            }
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rect"></div>
+    <div class="button">Login</div>
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+</body>
+
+</html>
