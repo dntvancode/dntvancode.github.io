@@ -1,0 +1,236 @@
+*{
+    box-sizing: border-box;
+    margin:auto;
+}
+
+.hover{
+    width:auto;
+    height:500px;
+}
+.container{
+    width:100%;
+    margin:20px;
+    display:flex;
+    justify-content: center;
+    align-items: flex;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    background-color: whitesmoke;
+    padding:10px;
+    object-fit: contain;
+  }
+  
+  .grid > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 5px none;
+    text-align: center;
+    font-size: 30px;
+  }
+.grid img{
+    width: 150px;
+    height:150px;
+    background: cornflowerblue;
+    justify-content: center;
+    align-items: center;
+
+}
+.anh1 img:hover{
+    transform: scale(1);
+    background: cornflowerblue;
+    transition-duration: 1s;
+    
+}
+.anh2 img{
+    width: 150px;
+    height:150px;
+    justify-content: center;
+    align-items: center;
+    background-color: coral;
+}
+.anh2 img:hover{
+    transform: scale(1);
+    background-color: coral;
+    transition-duration: 1s;
+}
+.anh3 img{
+    width: 150px;
+    height:150px;
+    background-color: chartreuse;
+   
+}
+.anh3:hover{
+    transform: scale(1);
+    background-color: chartreuse;
+    transition-duration: 1s;
+}
+.anh1{
+    width: 100px;
+    height: 100px;
+    background: cornflowerblue;
+    justify-content: center;
+    align-items: center;
+
+}
+.anh1:hover{
+    width:150px;
+    height:150px;
+    background: cornflowerblue;
+    transition-duration: 1s;
+    
+}
+.anh2{
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+}
+.anh2:hover{
+    width:150px;
+    height:150px;
+    background-color: coral;
+    transition-duration: 1s;
+}
+.anh3{
+    width: 100px;
+    height: 100px;
+    background-color: chartreuse;
+   
+}
+.anh3:hover{
+    width:150px;
+    height:150px;
+    background-color: chartreuse;
+    transition-duration: 1s;
+}
+.anh4{
+    width: 100px;
+    height: 100px;
+    background: cornflowerblue;
+    justify-content: center;
+    align-items: center;
+
+}
+.anh4:hover{
+    width:150px;
+    height:150px;
+    background: cornflowerblue;
+    transition-duration: 1s;
+    
+}
+.anh5{
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+}
+.anh5:hover{
+    width:150px;
+    height:150px;
+    background-color: coral;
+    transition-duration: 1s;
+}
+.anh6{
+    width: 100px;
+    height: 100px;
+    background-color: chartreuse;
+   
+}
+.anh6:hover{
+    width:150px;
+    height:150px;
+    background-color: chartreuse;
+    transition-duration: 1s;
+}
+.anh7{
+    width: 100px;
+    height: 100px;
+    background: cornflowerblue;
+    justify-content: center;
+    align-items: center;
+
+}
+.anh7:hover{
+    width:150px;
+    height:150px;
+    background: cornflowerblue;
+    transition-duration: 1s;
+    
+}
+.anh8{
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+}
+.anh8:hover{
+    width:150px;
+    height:150px;
+    background-color: coral;
+    transition-duration: 1s;
+}
+.anh9{
+    width: 100px;
+    height: 100px;
+    background-color: chartreuse;
+   
+}
+.anh9:hover{
+    width:150px;
+    height:150px;
+    background-color: chartreuse;
+    transition-duration: 1s;
+}
+
+.beat{
+    color:red;
+    margin:50px;
+    animation: beat 2s infinite ;
+    
+}
+@keyFrames beat{
+   0%{transform: scale(1,1)}
+   15%{transform: scale(1,1)}
+    40%{transform: scale(1.2,1.2)}
+    50%{transform:scale(1.1,1.1)}
+    60%{transform: scale(1.2,1.2)}
+    90%{transform:scale(1,1)}
+    100%{transform: scale(1,1)}
+}
+
+.animation{
+    margin:20px;
+    width: fit-content;
+    height:fit-content;
+    font-family: 'roboto', sans-serif;  
+    text-align: center;
+    font-weight: bolder;
+    font-size:30px;
+}
+
+.code{
+    background-color: green;
+    color:white;
+    
+    animation:  3s ease-out;
+}
+
+.teach{
+    background-color: purple;
+    color:white;
+    display:none;
+    padding: 10px;
+}
+
+.learn{
+    background-color: yellow;
+    color:white;
+    display:none;
+}
+@keyframes code{
+    from{ transform:translate(0,0)}
+    to {transform: translate(100px,0)}
+}
+/* pseudo element after rồi chuyển màu text */
+
+
