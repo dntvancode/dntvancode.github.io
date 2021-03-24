@@ -1,8 +1,10 @@
 document.write("Lam bai tap ve hinh");
 document.write("</br>");
 document.writeln("Bai 1: Vẽ hình chữ nhật đặc có kích thước mxn (trong đó  m,n > 0)");
+document.write("<br/>")
 document.writeln("Bai 2");
 
+// hình chữ nhật
 function rectangle(m, n) {
     if (m <= 0 || n <= 0 || Number.isInteger(m) === false || Number.isInteger(n) === false) {
         document.writeln("Thông số đầu vào không hợp lệ");
@@ -52,37 +54,62 @@ function hollowRec(m, n) {
 
 //vẽ tam giác vuông
 function RightTriangle(h) {
-    var str = "*";
-    
+    var str = "*  ";
+
     if (h < 0 || Number.isInteger(h) === false) {
         return "Không đúng thông số";
     }
     //str = "* ";
-    for (var i = 1; i <= h; i++) {
-        for (var j = 1; j<=((i*2)-1); j++){
-                //str += " * ";
-               document.write(str);
-            }
-        
-    document.write("<br/  >");
+    for (var i = 1; i < h; i++) {
+        for (var j = 1; j <= i; j++) {
+            //str += " * ";
+            document.write(str);
+        }
+
+        document.write("<br/  >");
     }
 }
 
 //vẽ tam giác cân ngược
-function RevTriangle(h){    
+function RevTriangle(h) {
+    var str = "";
     if (h < 0 || Number.isInteger(h) === false) {
         return "Không đúng thông số";
     }
-    for(var i = h; i >=1; i--){
-        for (var j = h; j>i; j--){
-            //str += "  "
-            document.write("  ")
+    ;
+    for (var i = 0; i <= h; i++) {
+        //str += "<br/>";
+        for (var j = 0; j < h * 2 - 1; j++) {
+            if (j < i || j > 2 * h -i -2) {
+                str += "* ".fontcolor("white")
+            }
+            else {
+                str += "* ";
+            }
         }
-        for (var k = 1; k<(i*2); k++){
-            document.write(" * ")
-        }
-        
-        document.write("</br >");
-        
+        str += "<br/>";
+        document.writeln(str);
     }
 }
+
+//số chẵn số lẻ
+function EvenOdd(n) {
+    if (n < 0 || Number.isInteger(n) === false) {
+        return "-1";
+    }
+    var i = 0;
+    while (n > 0) {
+        if (n % 2 === 0) {
+            n = n / 2;
+            i++;
+        }
+        else if (n % 2 !== 0) {
+            n = n * 3 + 1;
+            i++;
+        }
+    }
+    if (i>0){
+    return "số lần để tổng = 1 là: "+ i;
+    }
+}
+
