@@ -77,7 +77,7 @@ function RevTriangle(h) {
         return "Không đúng thông số";
     }
     ;
-    for (var i = 0; i <= h; i++) {
+    for (var i = 0; i < h; i++) {
         //str += "<br/>";
         for (var j = 0; j < h * 2 - 1; j++) {
             if (j < i || j > 2 * h -i -2) {
