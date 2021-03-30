@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: auto;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width =device-width, initial-scale =1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            margin: auto;
+            background-color: #F8F1F1;
+            padding: 50px;
+            width: fit-content;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            border-radius: 1.5em;
+        }
+
+        h3 {color: #5EAAA8;}
+
+        p {color: #a3d2ca;}
+
+        button {
+            background-color: #eb5e0b;
+            color: whitesmoke;
+            border: none;
+            padding: 15px;
+            border-radius: .5em;
+            opacity: 0.8;
+            transition: 0.3s;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 1
+        }
+
+        #height {
+            padding:5px;
+        }
+
+        #weight {
+            padding: 5px;
+        }
+        #result{
+            color:#5EAAA8;
+            max-width: 165px;
+        }
+        #reset{
+            background-color: #eb5e0b;
+            color: whitesmoke;
+            border: none;
+            padding: 15px;
+            border-radius: .5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h3>Calculate BMI</h3>
+        <p>Height</p>
+        <input id="height" type="number" placeholder="cm">
+
+        <p>Weight</p>
+        <input id="weight" type="number" placeholder="kg">
+        <br></br>
+        <button id="check" onclick="bmiRate()" type="submit">Calculate</button>
+        <input id= "reset" type="button" onclick="resetButton()" value="Reset">
+        <p id="result"></p>
+    </div>
+
+    <script src="./bmi.js"></script>
+</body>
+
+</html>

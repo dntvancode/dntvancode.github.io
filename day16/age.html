@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: auto;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width =device-width, initial-scale =1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            margin: auto;
+            background-color: #F8F1F1;
+            padding: 50px;
+            width: fit-content;
+            font-family: sans-serif;
+            border-radius: 1.5em;
+        }
+
+        button{
+            border:none;
+            background-color: cyan;
+            color: mediumblue;
+            padding: 5px;
+            border-radius: .5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id = "container">
+        <p>Your age</p>
+        <input id ="age" type="number">
+        <button id="button" onclick="ageCount()">Show</button>
+        <p id = "alert"></p>
+    </div>
+    <script src = "./age.js"></script>
+</body>
+
+</html>
