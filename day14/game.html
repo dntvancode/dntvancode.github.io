@@ -6,6 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width =device-width, initial-scale =1.0">
     <title>Index</title>
+    <style>
+        .parent {
+            margin: auto;
+            background-color: lightcyan;
+            width: fit-content;
+            padding: 30px;
+        }
+        h3{
+            text-indent: inherit;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,8 +27,11 @@
         <div class="action">
 
             <input type="number" id="number">
-            <button onclick=guess()>Guess</button>
+            <button id="button" onclick=guess()>Guess</button>
+            <button id="button2" style="margin-left: 5px;" onclick=reset()>Reset</button>
+
             <p id="result"></p>
+            <p id="remain"></p>
         </div>
     </div>
     <script src="./game.js">

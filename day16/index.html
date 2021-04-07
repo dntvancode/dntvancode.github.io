@@ -21,24 +21,24 @@
         function go() {
             console.log("Ham: go")
         }
-        let goButton = document.getElementById("go");
-        goButton.addEventListener("click", go); //trong html dùng onClick, khi ở trong js thì bỏ on
-        goButton.addEventListener("click", function () {
-            console.log("callback: go");
-        });
-        document.getElementById("go").addEventListener("click", go);
-        document.getElementById("go").addEventListener("click", function () {
-            console.log("get element");
-        })
+        // let goButton = document.getElementById("go");
+        // // goButton.addEventListener("click", go); //trong html dùng onClick, khi ở trong js thì bỏ on
+        // goButton.addEventListener("click", function () {
+        //     console.log("callback: go");
+        // });
+        // document.getElementById("go").addEventListener("click", go);
+        // document.getElementById("go").addEventListener("click", function () {
+        //     console.log("get element");
+        // })
         document.addEventListener("click", function () {
             document.getElementsByTagName("body")[0].style.backgroundColor = "yellow";
         });
 
         document
-            .getElementById("newInput")
-            .addEventListener("change", function () {
-                console.log(document.getElementById("newInput").value);
-            })
+            // .getElementById("newInput")
+            // .addEventListener("change", function () {
+            //     console.log(document.getElementById("newInput").value);
+            // })
 
     </script>
 

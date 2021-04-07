@@ -25,22 +25,33 @@ function sumBetween(a, b) {
         }
     }
 }
+// nếu a,b liên tiếp=> return
+//a < b và b > a
 
 //bài 2: chuyển chuỗi thành dạng Spinal case:HELLO world=> hello-world
 function spinalCase(str) {
     return str.replace(/\s+|_+/g, '-').toLowerCase();
 }
 document.getElementById("spinal").innerHTML=spinalCase("HELLO world")
+//dùng split và join
 
 //bài 3: thời gian
-function timeAdd(){
+function timeAdd(t){
+
 
 }
+timeAdd()
+//truyền vào chuỗi theo dạng giờ phút giây - 3 biến
+//giây: giờ *3600+ phút *60 + giây
+//tổng giây+=x
+
 //bài 4: ốc sên
 function snail(){
     var
 
 }
+// chiều cao h, x tụt lên, y tụt xuống
+
 
 //bài 5: sắp xếp để có số nhỏ nhất
 function smallestNumber(x){
@@ -65,7 +76,18 @@ else{
 
 //bài 6: đổi màu nền
 function change(){}
-document.addEventListener("click",function change(){
-    var random = Math.floor(Math.random()*16777215).toString(16);
-    document.getElementsByTagName("body")[0].style.backgroundColor = "#" + random;
+//var random = Math.floor(Math.random()*16777215).toString(16);
+document.addEventListener("click",function (){
+   var letters = "0123456789ABCDEF".split('');
+   var random = "#";
+   for (var i = 0; i < 6; i++ ) {
+       random += letters[Math.floor(Math.random() * 16)];
+       document.getElementsByTagName("body")[0].style.backgroundColor = random;
+    //đổi color cho tag name và classs name bằng vòng lặp for
+    //else dùng querySelector{}//querySelectorAll[]erySelectorAll[]
+   }
 });
+color.addEventListener("click", change);
+change();
+//colorname
+//for 0->6 random 
