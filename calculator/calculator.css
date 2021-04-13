@@ -1,22 +1,23 @@
 body{
     background-color: #dbf6e9;
 }
-#container{
+.container{
     box-sizing: border-box;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Arial, Helvetica, sans-serif;
-
-
+    min-height: 100vh;
 }
 #calculator{ 
     background-color: #222831;
     border-radius: 1em;
     margin: auto;
+    box-shadow: 5px 10px #888888;
 }
  #keys{
+
     margin: auto;
     padding: 30px;
     display: grid;
@@ -25,12 +26,12 @@ body{
     grid-template-columns: repeat(4,100px);
 } 
 #calculator >#screen{
-    grid-column: 1/-1;
-    margin: 20px 20px;
+    margin: 20px;
     padding:0.75rem 1rem;
     font-size: 1.5em;
     text-align: right;
     color:azure;
+    overflow: hidden;
 
 }
 .zero{
@@ -47,7 +48,7 @@ body{
     font-size: 1.5em;
     padding: 20px;
     cursor: pointer;
-    outline: none
+    outline: none;
 }
 #keys > button:hover{
     opacity: .9;

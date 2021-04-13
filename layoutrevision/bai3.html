@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width =device-width, initial-scale =1.0" />
+    <title>Layout</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #f1f6f9;
+        font-family: "Monserrat", sans-serif;
+      }
+      ul {
+        margin: 20px;
+        padding: 20px;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      li {
+        padding: 10px;
+        background-color: #686d76;
+      }
+
+      li a {
+        color: #f1f6f9;
+        text-align: center;
+        padding: 10px 10px;
+        text-decoration: none;
+      }
+      #selected {
+        background-color: #ee6f57;
+      }
+
+      /* Layout bài 3 */
+      #container {
+        margin: 30px;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-areas: "box box2";
+      }
+      #box {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 15px;
+      }
+      #box > .square {
+        height: 200px;
+        background-color: blue;
+      }
+      #box2 {
+        display: grid;
+        grid-template-columns: auto;
+        background-color: blue;
+        margin-left: 15px;
+      }
+      @media (max-width: 800px) {
+        #container {
+          margin: 30px;
+          grid-template-columns: auto;
+          grid-template-areas: "box" "box2";
+        }
+        #box2 {
+          margin-top: 30px;
+          margin-left: 0px;
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="box">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+      <div id="box2"></div>
+    </div>
+    <ul id="list">
+      <li>
+        <a
+          href="/Users/vaandough/Desktop/web14/layoutrevision/index.html"
+          target="_blank"
+          title="Bai-2"
+          >Bài 1</a
+        ><br />
+      </li>
+      <li>
+        <a
+          href="/Users/vaandough/Desktop/web14/layoutrevision/bai2.html"
+          target="_blank"
+          title="Bai-2"
+          >Bài 2</a
+        ><br />
+      </li>
+      <li id="selected">
+        <a
+          href="/Users/vaandough/Desktop/web14/layoutrevision/bai3.html"
+          target="_blank"
+          title="Bai-3"
+          >Bài 3</a
+        ><br />
+      </li>
+      <li>
+        <a
+          href="/Users/vaandough/Desktop/web14/layoutrevision/bai4.html"
+          target="_blank"
+          title="Bai-4"
+          >Bài 4</a
+        ><br />
+      </li>
+      <li>
+        <a
+          href="/Users/vaandough/Desktop/web14/layoutrevision/bai5.html"
+          target="_blank"
+          title="Bai-5"
+          >Bài 5</a
+        ><br />
+      </li>
+    </ul>
+  </body>
+</html>
