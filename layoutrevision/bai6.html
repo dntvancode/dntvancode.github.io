@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width =device-width, initial-scale =1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <title>Layout</title>
     <style>
       body {
@@ -27,68 +31,103 @@
       li a {
         color: #f1f6f9;
         text-align: center;
-        padding: 14px 16px;
+        padding: 10px 10px;
         text-decoration: none;
       }
       #selected {
         background-color: #ee6f57;
       }
 
-      /* Layout bài 5 */
-
-      #header {
-        width: 100%;
-        height: 50px;
+      /* Layout bài 6 */
+      #nav {
+        height: 60px;
         display: flex;
         justify-content: space-between;
-        align-items: center;
-       
+        background-color: lightgreen;
       }
-
-      #tab, #tab-box3{
+      #menu {
         display: flex;
-        background-color: lightblue;
-      }
-      .box {
-        background-color: blue;
-        width: 90px;
-        height: 30px;
         margin: 15px;
       }
+      .tab {
+        background-color: lightblue;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .home {
+        display: none;
+      }
+      #dropdownMenu {
+        display: none;
+      }
 
+      #containerLogo {
+        margin: 15px;
+      }
+      #logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 30px;
+        background-color: pink;
+      }
+      /* nội dung */
       #container {
         margin: 15px;
       }
-      #container > .square {
+      #square {
         height: 500px;
         width: 100%;
         background-color: blue;
       }
 
-      @media (max-width: 600px) {   
-        #header{
-          display: flex;
-          width: 60px;
-          margin: 15px;
-                
+      @media (max-width: 500px) {
+        #logo {
+          display: none;
         }
-        #container > .square {
-          margin-top: 15px;
+        #containerMenu {
+          margin: 15px;
+        }
+        #dropdownMenu {
+          display: block;
+          padding: 10px;
+        }
+        #nav {
+          flex-direction: column;
+          height: auto;
+        }
+        #containerLogo {
+          margin: 0;
+        }
+        #menu {
+          display: none;
+        }
+        .tab {
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
     </style>
   </head>
   <body>
     <div id="nav">
-      <div id="header">
-        <div id="tab">
-          <div class="box"></div>
-          <div class="box"></div>
-        </div>
-        <div id="tab-box3"><div class="box"></div></div>
+      <div id="containerLogo"><div id="logo">Logo</div></div>
+      <div id="containerMenu">
+        <div id="dropdownMenu"><i class="fas fa-bars"></i></div>
       </div>
-      <div id="container"><div class="square"></div></div>
+      <div id="menu">
+        <div class="tab home">Trang chủ</div>
+        <div class="tab">Menu 1</div>
+        <div class="tab">Menu 2</div>
+        <div class="tab">Menu 3</div>
+      </div>
     </div>
+    <div id="container"><div id="square"></div></div>
+
     <ul>
       <li>
         <a href="./index.html" target="_blank" title="Bai-2">Bài 1</a><br />
@@ -102,15 +141,21 @@
       <li>
         <a href="./bai4.html" target="_blank" title="Bai-4">Bài 4</a><br />
       </li>
-      <li id="selected">
+      <li>
         <a href="./bai5.html" target="_blank" title="Bai-5">Bài 5</a><br />
       </li>
-      <li>
+      <li id="selected">
         <a href="./bai6.html" target="_blank" title="Bai-5">Bài 6</a><br />
       </li>
       <li>
         <a href="./bai7.html" target="_blank" title="Bai-5">Bài 7</a><br />
       </li>
     </ul>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $("#dropdownMenu").click(function () {
+        $("#menu").toggle();
+      });
+    </script>
   </body>
 </html>
